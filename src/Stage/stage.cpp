@@ -45,8 +45,11 @@ Stage::Stage(std::filesystem::path const& baseStage,
 		if (fs::exists(baseStage / p)) {
 			if (fs::is_directory(baseStage / p)) {
 				fs::create_directories(m_stage / p);
+				fs::copy(
+				    baseStage / p, m_stage / p, fs::copy_options::recursive);
+			} else {
+				fs::copy(baseStage / p, m_stage / p);
 			}
-			fs::copy(baseStage / p, m_stage / p);
 		}
 	}
 }
