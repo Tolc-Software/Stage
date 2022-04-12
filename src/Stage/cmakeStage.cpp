@@ -78,7 +78,7 @@ int CMakeStage::configureAndBuild() {
 
 int CMakeStage::runCMakeConfigure(std::string const& compiler) {
 	return runCommand(
-	    "cmake -S. -Bbuild -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=\"" +
+	    "cmake -S. -Bbuild -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=\"" +
 	    compiler + "\"");
 }
 
