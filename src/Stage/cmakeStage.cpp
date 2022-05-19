@@ -1,4 +1,5 @@
 #include "Stage/cmakeStage.hpp"
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
